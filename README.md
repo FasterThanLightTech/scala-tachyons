@@ -1,2 +1,2 @@
 # scala-tachyons
-see branches for cala templates
+see branches for scala templates
