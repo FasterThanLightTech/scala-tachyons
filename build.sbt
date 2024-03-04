@@ -7,6 +7,6 @@ organization := "com.ftlt.tachyons"
 semanticdbEnabled := true
 
 //Sbt aliases
-addCommandAlias("fmt",";scalafmtAll;scalafixAll")
-addCommandAlias("fmtc",";scalafmtCheckAll;scalafixAll --check")
+addCommandAlias("fmt",";scalafmtAll;scalafmtSbt;scalafixAll")
+addCommandAlias("fmtc",";scalafmtCheckAll;scalafmtSbtCheck;scalafixAll --check")
 
