@@ -1,5 +1,7 @@
 package com.ftlt.basic.tachyon
 
+import scala.annotation.nowarn
+
 class SampleCode:
 
   val example1 =
@@ -9,8 +11,9 @@ class SampleCode:
       |  * three
       |""".stripMargin
 
+  @nowarn
   private def thisIsPrivate(arg1: String) =
-    if "foo" == "" && "bar" == ""
+    if "foo" == arg1 && "bar" == ""
     then "baz"
     else "bar"
 
