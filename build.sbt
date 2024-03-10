@@ -1,6 +1,6 @@
 //Basic Setup
 scalaVersion := "3.4.0"
-name         := "basic-tachyon"
+name         := "scala-cucumber"
 organization := "com.ftlt.tachyons"
 
 //Scalafix setup
