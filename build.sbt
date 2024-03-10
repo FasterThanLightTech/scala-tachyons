@@ -5,11 +5,11 @@ organization := "com.ftlt.tachyons"
 
 libraryDependencies += compilerPlugin("com.github.ghik" % s"zerowaste_${scalaVersion.value}" % "0.2.18")
 
-//Convert warnings to error for zerowaste plugin
-scalacOptions += "-Werror"
-
 //Scalafix setup
 semanticdbEnabled := true
+
+//Dependencies Setup
+libraryDependencies += compilerPlugin("com.github.ghik" % ("zerowaste_" + scalaVersion.value) % "0.2.18")
 
 //Sbt aliases
 addCommandAlias("fmt", ";scalafmtAll;scalafmtSbt;scalafixAll")

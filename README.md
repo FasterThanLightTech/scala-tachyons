@@ -23,6 +23,11 @@ Plugin URL : https://github.com/rtimush/sbt-updates
 sbt dependencyUpdates
 ```
 
+## Zerowaste Plugin
+This plugin will detect unused val
+Plugin URL : https://github.com/ghik/zerowaste 
+
+
 ## Scalac Options Plugin
 Plugin URL : https://github.com/typelevel/sbt-tpolecat
 ```shell
