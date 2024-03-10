@@ -15,10 +15,9 @@ libraryDependencies ++= Seq(
   compilerPlugin("com.github.ghik" % ("zerowaste_" + scalaVersion.value) % "0.2.18")
 )
 
-//coverageEnabled := true
-
 //Sbt aliases
 addCommandAlias("fmt", "; scalafmtAll ; scalafmtSbt ; scalafixAll")
 addCommandAlias("fmtc", "; scalafmtCheckAll ; scalafmtSbtCheck ; scalafixAll --check")
-addCommandAlias("ci", "; fmtc ; coverage ; test ; coverageReport")
+addCommandAlias("testc", "; coverage ; test ; coverageReport")
+addCommandAlias("ci", "; fmtc ; testc")
 addCommandAlias("lci", "; fmt ; ci")
