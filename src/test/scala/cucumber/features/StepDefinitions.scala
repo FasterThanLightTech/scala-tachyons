@@ -1,22 +1,32 @@
 package cucumber.features
 
 import com.ftlt.basic.tachyon.Calculator
-import io.cucumber.scala.EN
-import io.cucumber.scala.ScalaDsl
+import io.cucumber.scala.{EN, ScalaDsl, Scenario}
+
 import scala.compiletime.uninitialized
 
 class StepDefinitions extends ScalaDsl with EN:
 
-  /*Given operation +
-    Given operand one 1
-    Given operand two 1
-    When calculation is performed
-    Then result is 2*/
-
-  var operandOne: Int   = uninitialized
-  var operandTwo: Int   = uninitialized
+  var operandOne: Int = uninitialized
+  var operandTwo: Int = uninitialized
   var operation: String = uninitialized
-  var result: Int       = uninitialized
+  var result: Int = uninitialized
+
+  Before { (scenario: Scenario) =>
+    println("Before Scenario : "+scenario.getName)
+  }
+
+  After { (scenario: Scenario) =>
+    println("After Scenario : " + scenario.getName)
+  }
+
+  BeforeStep { (step: Scenario) =>
+    println("Before Step : ")
+  }
+
+  AfterStep { (step: Scenario) =>
+    println("After Step : ")
+  }
 
   Given("operand one {int}") { (_operandOne: Int) =>
     operandOne = _operandOne
