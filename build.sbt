@@ -7,7 +7,7 @@ organization := "com.ftlt.tachyons"
 semanticdbEnabled := true
 
 //Dependencies Setup
-libraryDependencies += compilerPlugin("com.github.ghik" % ("zerowaste_" + scalaVersion.value) % "0.2.18")
+libraryDependencies += compilerPlugin("com.github.ghik" %% "zerowaste" % "0.2.18" cross CrossVersion.full)
 
 //Sbt aliases
 addCommandAlias("fmt", "; scalafmtAll ; scalafmtSbt ; scalafixAll")
